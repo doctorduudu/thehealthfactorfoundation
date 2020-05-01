@@ -5,6 +5,7 @@ import BloodDonationImg from "../img/blood-donation.jpg";
 import HealthAdvocacyImg from "../img/health-advocacy.jpg";
 import Title from "./common/title";
 import ProgramCard from "./common/programCard";
+import Form from "./common/form";
 
 class Home extends Component {
   state = {};
@@ -12,25 +13,25 @@ class Home extends Component {
     return (
       <React.Fragment>
         <header id="header">
-          <div class="container-fluid">
-            <div class="row headerHeight align-items-center">
-              <div class="col header-content text-white mx-5">
-                <h1 class="display-4 text-capitalize">the health factor</h1>
-                <h4>the health of the aged, our priority</h4>
+          <div className="container-fluid">
+            <div className="row headerHeight align-items-center">
+              <div className="col header-content text-white mx-5">
+                <h1 className="display-4 text-capitalize">the health factor</h1>
+                <h4>the health of the aged... our priority</h4>
                 {/* <button
-                  class="btn donate-btn text-uppercase bg-light my-3 mr-3"
+                  className="btn donate-btn text-uppercase bg-light my-3 mr-3"
                   aria-label="join our team"
                 >
-                  <a href="" class="text-danger">
-                    <i class="fas fa-users mx-1"></i>join our team
+                  <a href="" className="text-danger">
+                    <i className="fas fa-users mx-1"></i>join our team
                   </a>
                 </button> */}
                 <button
-                  class="btn donate-btn text-uppercase bg-light my-3"
+                  className="btn donate-btn text-uppercase bg-light my-3"
                   aria-label="donate"
                 >
-                  <a href="/donate" class="text-danger">
-                    <i class="fas fa-dollar-sign mx-1"></i>donate
+                  <a href="/donate" className="text-danger">
+                    <i className="fas fa-dollar-sign mx-1"></i>donate
                   </a>
                 </button>
               </div>
@@ -39,10 +40,10 @@ class Home extends Component {
         </header>
 
         <section id="programs">
-          <Title title="What we do" />
-          <div class="container-fluid mb-5">
-            <div class="row">
-              <div class="col-md-6 col-10 mx-auto">
+          <div className="container-fluid mb-5">
+            <Title title="What we do" />
+            <div className="row">
+              <div className="col-md-6 col-10 mx-auto">
                 <ProgramCard
                   imgSrc={MedicalConsultancyImg}
                   title="Medical Consultancy"
@@ -53,7 +54,7 @@ privileged and handicapped) inspire the ethical tool of beneficence, non-malefic
 autonomy and jurisprudence."
                 />
               </div>
-              <div class="col-md-6 col-10 mx-auto">
+              <div className="col-md-6 col-10 mx-auto">
                 <ProgramCard
                   imgSrc={MedicalOutreachImg}
                   title="Medical Outreach"
@@ -65,7 +66,7 @@ handicapped were the topmost priorities: the sense of preventing diseases throug
 health screening is imperative."
                 />
               </div>
-              <div class="col-md-6 col-10 mx-auto">
+              <div className="col-md-6 col-10 mx-auto">
                 <ProgramCard
                   imgSrc={BloodDonationImg}
                   title="Blood Donation"
@@ -79,7 +80,7 @@ encourage the youth on the essence of donating blood as a form of saving a life 
 deal of emotional and physical stability."
                 />
               </div>
-              <div class="col-md-6 col-10 mx-auto">
+              <div className="col-md-6 col-10 mx-auto">
                 <ProgramCard
                   imgSrc={HealthAdvocacyImg}
                   title="Health Advocacy"
@@ -96,12 +97,12 @@ focused on available, safe and quality care."
         </section>
 
         <section id="about">
-          <div class="container-fluid">
-            <div class="row mb-5 no-gutters">
-              <div class="col-md-6 aboutbg"></div>
-              <div class="col-md-6 pl-2 text-center">
+          <div className="container-fluid">
+            <div className="row mb-5 no-gutters">
+              <div className="col-md-6 aboutbg"></div>
+              <div className="col-md-6 pl-2 text-center">
                 <Title title="who we are" />
-                <p class="about-text text-justify" id="about-text">
+                <p className="about-text text-justify" id="about-text">
                   The Health Factor Foundation is a non-governmental and
                   charitable organization aimed at providing assistance in
                   primary health care for the aged, less privileged and
@@ -124,7 +125,7 @@ focused on available, safe and quality care."
                 <a href="/about#about-us">
                   <button
                     type="button"
-                    class="button w-50 rounded btn-outline-danger"
+                    className="button w-50 rounded btn-outline-danger"
                     aria-label="Continue Reading"
                   >
                     Continue Reading
@@ -136,129 +137,82 @@ focused on available, safe and quality care."
         </section>
 
         <section id="events">
-          <Title title="events" />
-          <div class="container-fluid mb-5">
-            <div class="row">
-              <div class="col-11 col-md-10 col-lg-5 border rounded mx-auto my-2">
-                <h4 class="text-center text-capitalize text-danger">
+          <div className="container-fluid mb-5">
+            <Title title="events" />
+            <div className="row">
+              <div className="col-11 col-md-10 col-lg-5 border rounded mx-auto my-2">
+                <h4 className="text-center text-capitalize text-danger">
                   upcoming event
                 </h4>
                 <img
                   src={MedicalOutreachImg}
-                  class="img-fluid py-auto"
+                  className="img-fluid py-auto"
                   alt="upcoming event"
                 />
               </div>
-              <div class="col-11 col-md-10 col-lg-5 border rounded mx-auto my-2">
-                <h4 class="text-center text-capitalize text-danger">
-                  past events
+
+              <div className="col-11 col-md-10 col-lg-5 mx-auto my-2">
+                <h4 className="text-center text-capitalize text-danger">
+                  Event Details
                 </h4>
-                <div
-                  id="eventsCarousel"
-                  class="carousel slide"
-                  data-ride="carousel"
-                >
-                  <div class="carousel-inner" style={{ fontSize: "0.8rem" }}>
-                    <div class="carousel-item active">
-                      <img
-                        class="d-block img-fluid"
-                        src={MedicalOutreachImg}
-                        alt="First slide"
-                      />
-                      <div class="carousel-caption">
-                        <h5>Health Screening at the Mall</h5>
-                        <p>
-                          Okay So we went to the Mall and did some interesting
-                          health screening activity
-                        </p>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        class="d-block img-fluid"
-                        src={MedicalOutreachImg}
-                        alt="Second slide"
-                      />
-                      <div class="carousel-caption">
-                        <h5>Health Screening at the Mall</h5>
-                        <p>
-                          Okay So we went to the Mall and did some interesting
-                          health screening activity
-                        </p>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        class="d-block img-fluid"
-                        src={MedicalOutreachImg}
-                        alt="Third slide"
-                      />
-                      <div class="carousel-caption">
-                        <h5>Health Screening at the Mall</h5>
-                        <p>
-                          Okay So we went to the Mall and did some interesting
-                          health screening activity
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <a
-                    class="carousel-control-prev"
-                    href="#eventsCarousel"
-                    role="button"
-                    data-slide="prev"
-                    aria-label="previous"
+                <span className="h5">Date: </span>
+                <span>23rd January 2020</span>
+                <br />
+                <span className="h5">Location: </span>
+                <span>WestHills Mall, Accra</span>
+                <br />
+                <br />
+                <span className="h5">Summary</span>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Harum quae eaque laborum corrupti exercitationem placeat eos
+                  perferendis eius vel doloremque, fugiat porro dignissimos
+                  nesciunt aut voluptas. Repudiandae officiis suscipit modi nam
+                  quaerat labore, mollitia possimus repellat. Sequi facere
+                  repellat corporis adipisci atque consequatur deleniti
+                  doloremque, modi quia vero exercitationem est?
+                </p>
+                <a href="/events">
+                  <button
+                    type="button"
+                    className="button w-75 rounded btn-outline-danger"
+                    aria-label="Continue Reading"
                   >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a
-                    class="carousel-control-next"
-                    href="#eventsCarousel"
-                    role="button"
-                    data-slide="next"
-                    aria-label="forward"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+                    Continue Reading
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         <section id="contact">
-          <div class="container-fluid">
+          <div className="container-fluid">
             <Title title="get in touch" />
-            <div class="row no-gutters align-items-center">
-              <div class="col-md-5 text-white mx-auto bg-danger text-center my-3 py-2 rounded">
-                <i class="fas fa-phone"></i>
-                <span class="contact-no h4">+233535505050</span>
+            <div className="row no-gutters align-items-center">
+              <div className="col-md-5 text-white mx-auto bg-danger text-center my-3 py-2 rounded">
+                <i className="fas fa-phone"></i>
+                <span className="contact-no h4">+233535505050</span>
               </div>
-              <div class="col-md-5 text-white mx-auto bg-danger text-center my-3 py-2 rounded">
-                <i class="far fa-envelope"></i>
-                <span class="contact-mail h4">contact@healthfactor.com</span>
+              <div className="col-md-5 text-white mx-auto bg-danger text-center my-3 py-2 rounded">
+                <i className="far fa-envelope"></i>
+                <span className="contact-mail h4">
+                  contact@healthfactor.com
+                </span>
               </div>
             </div>
-            <div class="row my-5 d-flex justify-content-around">
+            <div className="row my-5 d-flex justify-content-around">
               <a href="#">
-                <i class="fab fa-facebook-square display-4"></i>
+                <i className="fab fa-facebook-square display-4"></i>
               </a>
               <a href="#">
-                <i class="fab fa-youtube-square display-4"></i>
+                <i className="fab fa-youtube-square display-4"></i>
               </a>
               <a href="#">
-                <i class="fab fa-twitter-square display-4"></i>
+                <i className="fab fa-twitter-square display-4"></i>
               </a>
               <a href="#">
-                <i class="fab fa-instagram display-4"></i>
+                <i className="fab fa-instagram display-4"></i>
               </a>
             </div>
           </div>
